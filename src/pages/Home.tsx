@@ -1,10 +1,19 @@
+import { Container } from '@mui/material';
 import { Filter } from '../components/Filter';
+import { NewsList } from '../components/NewsList';
 
 export const Home = () => {
   return (
-    <div className='container'>
+    <Container
+      maxWidth="lg"
+      sx={{
+        mt: 3,
+        mb: 3,
+      }}
+    >
       <Filter />
-    </div>
+      <NewsList />
+    </Container>
   )
 }
 
