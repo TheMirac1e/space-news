@@ -1,6 +1,7 @@
 import { Container } from '@mui/material';
 import { Filter } from '../components/Filter';
 import { NewsList } from '../components/NewsList';
+import { TotalCount } from '../components/TotalCount';
 
 export const Home = () => {
   return (
@@ -12,6 +13,7 @@ export const Home = () => {
       }}
     >
       <Filter />
+      <TotalCount />
       <NewsList />
     </Container>
   )

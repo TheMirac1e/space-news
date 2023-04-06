@@ -15,7 +15,7 @@ export const Filter = () => {
       label="Filter news"
       size="small"
       color="secondary"
-      className="w-full"
+      className="w-full mb-6"
       onChange={debounce(handleChange, 500)}
       InputProps={{
         startAdornment: (
