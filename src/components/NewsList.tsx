@@ -29,7 +29,7 @@ export const NewsList = () => {
     })
 
     return (
-      <Grid container spacing={3} columns={{ xs: 4, sm: 8, md: 12 }} className='my-7 flex justify-center gap-2'>
+      <Grid container spacing={3} columns={{ xs: 4, sm: 8, md: 12 }} className='my-7 flex justify-center gap-3'>
         {items}
       </Grid>
     );

@@ -3,6 +3,7 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { INewsCard } from '../types/types';
 import { Link } from 'react-router-dom';
 
+// TODO remove material items
 export const NewsCard = ({ ...props }: INewsCard) => {
   const { image, date, title, subtitle, id } = props;
   const formatDate = new Date(date).toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
