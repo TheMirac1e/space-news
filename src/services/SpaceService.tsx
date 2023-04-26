@@ -8,6 +8,11 @@ export const useSpaceService = () => {
     return res.results.map(_transformNewsList);
   }
 
+  const getNewsCount = async (filter: string) => {
+    const res = await request(`https://api.spaceflightnewsapi.net/v3/articles/count?title_contains=${filter}`)
+    return res;
+  }
+
   const _transformNewsList = (news: any) => {
     return {
       id: news.id,
@@ -18,5 +23,5 @@ export const useSpaceService = () => {
     }
   }
 
-  return { loading, error, request, clearError, getAllNews };
+  return { loading, error, request, clearError, getAllNews, getNewsCount };
 }
