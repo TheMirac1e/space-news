@@ -2,6 +2,7 @@ import { debounce, InputAdornment, TextField } from '@mui/material';
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
 import { useState } from 'react';
 
+// add filter by name
 export const Filter = () => {
   const [filter, setFilter] = useState();
 

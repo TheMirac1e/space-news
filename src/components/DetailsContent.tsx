@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 
+// remove material components
 const DetailsContent = () => {
   return (
     <Paper
@@ -34,7 +35,7 @@ const DetailsContent = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        {`Learn detailed information on the website`}
+        {`Learn detailed information on the wsSite} website`}
         <RocketLaunchIcon />
       </a>
       <Typography gutterBottom fontSize={14} fontWeight={700} component="span">
