@@ -4,7 +4,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 
 // remove material components
-const DetailsContent = () => {
+const DetailsContent = ({ article }: any) => {
   return (
     <Paper
       elevation={3}
@@ -19,9 +19,9 @@ const DetailsContent = () => {
       }}
     >
       <Typography textAlign="center" mb={4} variant="h6">
-        title
+        {article.title}
       </Typography>
-      <Typography>subtitle</Typography>
+      <Typography>{article.summary}</Typography>
       <a
         style={{
           color: "#37345f",
@@ -31,11 +31,11 @@ const DetailsContent = () => {
           gap: 5,
           marginTop: "25px",
         }}
-        href='#'
+        href={article.url}
         target="_blank"
         rel="noopener noreferrer"
       >
-        {`Learn detailed information on the wsSite} website`}
+        {`Learn detailed information on the ${article.news_site} website`}
         <RocketLaunchIcon />
       </a>
       <Typography gutterBottom fontSize={14} fontWeight={700} component="span">
