@@ -1,14 +1,10 @@
-const DetailsHeader = ({ article }: any) => {
+import { IDetailsHeader } from "../types/types";
+
+const DetailsHeader = ({ article }: IDetailsHeader) => {
   return (
-    <div
-      style={{
-        height: "300px",
-        backgroundImage: `url(${article.image_url})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    ></div>
+    <>
+      <img className="h-80 w-full object-cover block object-bottom" src={article.image_url} alt="header news image"></img>
+    </>
   );
 };
 
