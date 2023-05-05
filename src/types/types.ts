@@ -18,3 +18,7 @@ export interface IDetailsNews {
 export interface IDetailsHeader {
   article: IDetailsNews
 }
+
+export interface IDetailsContent {
+  article: IDetailsNews
+}
