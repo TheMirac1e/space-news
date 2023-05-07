@@ -12,7 +12,6 @@ interface article {
   url: string;
 }
 
-// add fetch details space news by id
 export const Details = () => {
   const { id } = useParams();
   const [article, setArticle] = useState<article | null>(null);

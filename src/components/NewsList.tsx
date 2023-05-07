@@ -1,4 +1,3 @@
-import { Grid } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useSpaceService } from "../services/SpaceService";
 import { NewsCard } from "./NewsCard";
@@ -29,9 +28,9 @@ export const NewsList = () => {
     })
 
     return (
-      <Grid container spacing={3} columns={{ xs: 4, sm: 8, md: 12 }} className='my-7 flex justify-center gap-3'>
+      <div className="my-7 grid grid-cols-1 gap-4 justify-center md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-3">
         {items}
-      </Grid>
+      </div>
     );
 
   }

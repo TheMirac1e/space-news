@@ -1,42 +1,32 @@
-import { Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { INewsCard } from '../types/types';
 import { Link } from 'react-router-dom';
 
-// TODO remove material items
+// TODO remove material icons if needed
 export const NewsCard = ({ ...props }: INewsCard) => {
   const { image, date, title, subtitle, id } = props;
   const formatDate = new Date(date).toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
   return (
-    <Card sx={{ maxWidth: 345 }} className="flex flex-col" id={id}>
-      <CardMedia
-        component="img"
-        height="140"
-        image={image}
-        alt="green iguana"
-      />
-      <CardContent>
-        <Typography
-          sx={{ mb: 1.5, display: "flex", alignItems: "center", gap: 0.5 }}
-          fontSize={14}
-          color="text.secondary"
-        >
+    <article className="rounded flex flex-col shadow-black shadow-md">
+      <img className="h-36 object-cover object-center rounded-t-[4px]" src={image} alt="news title image"></img>
+      <div className="p-4 flex flex-col h-full">
+        <p className="text-[12px] text-gray-600 flex items-center gap-1 mt-0 mb-[10px]">
           <CalendarMonthIcon fontSize="inherit" />
           {formatDate}
-        </Typography>
-        <Typography gutterBottom variant="h5" component="div">
+        </p>
+        <h3 className="text-[20px] mb-[10px]">
           {title}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
+        </h3>
+        <p className="text-[14px] mb-[15px]">
           {subtitle}
-        </Typography>
-      </CardContent>
-      <CardActions className="mt-auto p-4">
-        <Link to={`${id}`} className="text-black text-[13px] uppercase hover:underline">
+        </p>
+        <Link to={`${id}`} className="text-black text-[13px] uppercase hover:underline flex items-center gap-1 mt-auto">
           details
+          <NavigateNextIcon className="text-[16px]" />
         </Link>
-      </CardActions>
-    </Card>
+      </div>
+    </article>
   );
 }
