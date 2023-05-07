@@ -3,7 +3,7 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { INewsCard } from '../types/types';
 import { Link } from 'react-router-dom';
 
-// TODO remove material icons if needed
+// TODO remove material icons if needed, fix card shadow
 export const NewsCard = ({ ...props }: INewsCard) => {
   const { image, date, title, subtitle, id } = props;
   const formatDate = new Date(date).toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
