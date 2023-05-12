@@ -3,8 +3,8 @@ import useHttp from "../hooks/http.hooks";
 export const useSpaceService = () => {
   const { loading, error, request, clearError } = useHttp();
 
-  const getAllNews = async () => {
-    const res = await request('https://api.spaceflightnewsapi.net/v4/articles/?limit=9');
+  const getAllNews = async (limit: number) => {
+    const res = await request(`https://api.spaceflightnewsapi.net/v4/articles/?limit=${limit}`);
     return res.results.map(_transformNewsList);
   }
 

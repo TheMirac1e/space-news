@@ -9,8 +9,8 @@ export const NewsCard = ({ ...props }: INewsCard) => {
   const formatDate = new Date(date).toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
   return (
-    <article className="rounded flex flex-col shadow-black shadow-md">
-      <img className="h-36 object-cover object-center rounded-t-[4px]" src={image} alt="news title image"></img>
+    <article className="rounded flex flex-col shadow-black shadow-sm">
+      <img className="h-40 object-cover object-center rounded-t-[4px]" src={image} alt="news title image"></img>
       <div className="p-4 flex flex-col h-full">
         <p className="text-[12px] text-gray-600 flex items-center gap-1 mt-0 mb-[10px]">
           <CalendarMonthIcon fontSize="inherit" />

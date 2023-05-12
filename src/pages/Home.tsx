@@ -1,5 +1,4 @@
 import { Filter } from '../components/Filter';
-import { LoadMoreButton } from '../components/LoadMoreButton';
 import { NewsList } from '../components/NewsList';
 import { TotalCount } from '../components/TotalCount';
 
@@ -11,7 +10,6 @@ export const Home = () => {
         <Filter />
         <TotalCount />
         <NewsList />
-        <LoadMoreButton />
       </div>
     </section>
   )

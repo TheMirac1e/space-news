@@ -22,3 +22,10 @@ export interface IDetailsHeader {
 export interface IDetailsContent {
   article: IDetailsNews
 }
+
+export interface ILoadMoreButton {
+  onClick: Function
+  limit: number
+  loading: boolean
+}
+
