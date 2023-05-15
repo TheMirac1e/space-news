@@ -20,7 +20,7 @@ export const Filter = ({ ...props }: IFilter) => {
       <label htmlFor="filter">Filter news</label>
       <div className="relative">
         <ManageSearchIcon className="absolute top-1/2 translate-y-[-50%] left-2" />
-        <input className="w-full h-8 border-b-1 border-indigo-500 border-t-none" type="text" id="filter" onChange={handleChange} ></input>
+        <input className="w-full h-8 border-b-1 border-indigo-500 border-t-none pl-9" type="text" id="filter" onChange={handleChange} ></input>
       </div>
     </div>
   )

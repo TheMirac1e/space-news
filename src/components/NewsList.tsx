@@ -1,27 +1,7 @@
-import { useCallback, useEffect, useState } from "react";
-import { useSpaceService } from "../services/SpaceService";
 import { NewsCard } from "./NewsCard";
-import { LoadMoreButton } from '../components/LoadMoreButton';
 
-export const NewsList = () => {
-  const [spaceList, setSpaceList] = useState([]);
-  const [limit, setLimit] = useState(9);
-
-  const { getAllNews, loading } = useSpaceService();
-
-  const onRequest = useCallback(() => {
-    getAllNews(limit)
-      .then((newSpaceList: []) => onSpaceListLoaded(newSpaceList))
-  }, [getAllNews, limit]);
-
-  const onSpaceListLoaded = useCallback((newSpaceList: []) => {
-    setSpaceList([...spaceList, ...newSpaceList]);
-    setLimit(limit + newSpaceList.length);
-  }, []);
-
-  useEffect(() => {
-    onRequest();
-  }, []);
+export const NewsList = ({ ...props }) => {
+  const { spaceList } = props;
 
   function renderNews(arr: []) {
     const items = arr.map(card => {
@@ -51,7 +31,6 @@ export const NewsList = () => {
   return (
     <>
       {items}
-      <LoadMoreButton onClick={onRequest} limit={limit} loading={loading} />
     </>
   );
 };

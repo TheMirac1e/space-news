@@ -24,9 +24,10 @@ export interface IDetailsContent {
 }
 
 export interface ILoadMoreButton {
-  onClick: Function
-  limit: number
-  loading: boolean
+  limit: number;
+  setLimit: Function;
+  loading: boolean;
+  onRequest: Function;
 }
 
 export interface IFilter {
