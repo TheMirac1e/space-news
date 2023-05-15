@@ -29,3 +29,12 @@ export interface ILoadMoreButton {
   loading: boolean
 }
 
+export interface IFilter {
+  filter?: string;
+  setFilter: Function;
+}
+
+export interface ITotalCount {
+  filter?: string;
+}
+
