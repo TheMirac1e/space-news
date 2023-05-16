@@ -24,15 +24,15 @@ export const Home = () => {
 
   useEffect(() => {
     onRequest();
-  }, [filter]);
+  }, [filter, limit]);
 
   return (
     <section className="my-4">
       <div className="max-w-7xl px-4 mx-auto">
         <Filter filter={filter} setFilter={setFilter} />
         <TotalCount filter={filter} />
-        <NewsList spaceList={spaceList} limit={limit} setLimit={setLimit} onRequest={onRequest} />
-        <LoadMoreButton limit={limit} setLimit={setLimit} loading={loading} onRequest={onRequest} />
+        <NewsList spaceList={spaceList} />
+        <LoadMoreButton setLimit={setLimit} loading={loading} />
       </div>
     </section>
   )
