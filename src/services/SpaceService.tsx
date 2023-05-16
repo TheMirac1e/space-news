@@ -9,8 +9,8 @@ export const useSpaceService = () => {
   }
 
   const getNewsCount = async (filter: string) => {
-    const res = await request(`https://api.spaceflightnewsapi.net/v3/articles/count?title_contains=${filter}`)
-    return res;
+    const res = await request(`https://api.spaceflightnewsapi.net/v4/articles/?title_contains=${filter}`);
+    return res.count;
   }
 
   const getNewsById = async (id: string) => {
