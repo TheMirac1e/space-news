@@ -3,12 +3,12 @@ import { useSpaceService } from '../services/SpaceService';
 import { ITotalCount } from "../types/types";
 
 export const TotalCount = ({ ...props }: ITotalCount) => {
-  const { filter } = props;
+  const { filter, limit } = props;
   const { getNewsCount } = useSpaceService();
   const [count, setCount] = useState('');
 
   useEffect(() => {
-    getNewsCount(filter as string)
+    getNewsCount(limit, filter as string)
       .then(onRequest)
   }, [filter]);
 

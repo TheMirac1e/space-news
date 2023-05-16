@@ -5,7 +5,6 @@ import { NewsList } from '../components/NewsList';
 import { TotalCount } from '../components/TotalCount';
 import { useSpaceService } from '../services/SpaceService';
 
-// fix bug with loading
 export const Home = () => {
   const [filter, setFilter] = useState('');
   const [spaceList, setSpaceList] = useState([]);
@@ -30,7 +29,7 @@ export const Home = () => {
     <section className="my-4">
       <div className="max-w-7xl px-4 mx-auto">
         <Filter filter={filter} setFilter={setFilter} />
-        <TotalCount filter={filter} />
+        <TotalCount filter={filter} limit={limit} />
         <NewsList spaceList={spaceList} />
         <LoadMoreButton setLimit={setLimit} loading={loading} />
       </div>

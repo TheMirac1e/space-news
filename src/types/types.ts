@@ -35,5 +35,6 @@ export interface IFilter {
 
 export interface ITotalCount {
   filter?: string;
+  limit: number;
 }
 
