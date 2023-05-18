@@ -1,9 +1,9 @@
 export interface INewsCard {
-  image: string,
-  title: string,
-  subtitle: string,
-  date: string,
-  id: string
+  image: string;
+  title: string;
+  subtitle: string
+  date: string;
+  id: string;
 }
 
 export interface IDetailsNews {
@@ -16,11 +16,11 @@ export interface IDetailsNews {
 }
 
 export interface IDetailsHeader {
-  article: IDetailsNews
+  article: IDetailsNews;
 }
 
 export interface IDetailsContent {
-  article: IDetailsNews
+  article: IDetailsNews;
 }
 
 export interface ILoadMoreButton {
