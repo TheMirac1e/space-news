@@ -2,10 +2,11 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { INewsCard } from '../types/types';
 import { Link } from 'react-router-dom';
+import Highlighter from "react-highlight-words";
 
 // TODO remove material icons if needed, fix card shadow
 export const NewsCard = ({ ...props }: INewsCard) => {
-  const { image, date, title, subtitle, id } = props;
+  const { image, date, title, subtitle, id, filter } = props;
   const formatDate = new Date(date).toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
   return (
@@ -17,7 +18,11 @@ export const NewsCard = ({ ...props }: INewsCard) => {
           {formatDate}
         </p>
         <h3 className="text-[20px] mb-[10px]">
-          {title}
+          <Highlighter
+            highlightClassName="YourHighlightClass"
+            searchWords={[filter]}
+            autoEscape={true}
+            textToHighlight={title} />
         </h3>
         <p className="text-[14px] mb-[15px]">
           {subtitle}

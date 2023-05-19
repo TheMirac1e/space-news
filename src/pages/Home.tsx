@@ -30,7 +30,7 @@ export const Home = () => {
       <div className="max-w-7xl px-4 mx-auto">
         <Filter filter={filter} setFilter={setFilter} />
         <TotalCount filter={filter} limit={limit} />
-        <NewsList spaceList={spaceList} />
+        <NewsList spaceList={spaceList} filter={filter} />
         <LoadMoreButton setLimit={setLimit} loading={loading} />
       </div>
     </section>

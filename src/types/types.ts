@@ -4,6 +4,7 @@ export interface INewsCard {
   subtitle: string
   date: string;
   id: string;
+  filter: string;
 }
 
 export interface IDetailsNews {

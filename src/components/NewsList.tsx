@@ -1,7 +1,7 @@
 import { NewsCard } from "./NewsCard";
 
 export const NewsList = ({ ...props }) => {
-  const { spaceList } = props;
+  const { spaceList, filter } = props;
 
   function renderNews(arr: []) {
     const items = arr.map(card => {
@@ -15,6 +15,7 @@ export const NewsList = ({ ...props }) => {
           subtitle={subtitle}
           date={date}
           id={id}
+          filter={filter}
         />
       );
     });
