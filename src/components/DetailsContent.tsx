@@ -23,7 +23,7 @@ const DetailsContent = ({ article }: IDetailsContent) => {
       </a>
 
       <Link
-        to={`/news`}
+        to={`/space-news`}
         className="flex items-center gap-1 mt-4"
       >
         <ArrowBackIcon fontSize="inherit" />
