@@ -2,6 +2,7 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { INewsCard } from '../types/types';
 import { Link } from 'react-router-dom';
+// @ts-ignore
 import Highlighter from "react-highlight-words";
 
 // TODO remove material icons if needed, fix card shadow
