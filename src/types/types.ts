@@ -1,7 +1,7 @@
 export interface INewsCard {
   image: string;
   title: string;
-  subtitle: string
+  subtitle: string;
   date: string;
   id: string;
   filter: string;
@@ -38,4 +38,3 @@ export interface ITotalCount {
   filter?: string;
   limit: number;
 }
-
